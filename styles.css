@@ -1,0 +1,629 @@
+/* Базовые стили*/
+* {
+    font-family: "Arial", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(100, 100, 255);
+}
+
+a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Основной контейнер*/
+.content-holder {
+    margin: 25px;
+}
+
+/* Стили шапки и ее содержимого*/
+
+.header {
+    width: 100%;
+    padding-bottom: 20px;
+    box-shadow: 10px 13px 32px -20px #000000;
+}
+
+.text-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    margin-right: 5%;
+}
+
+.logo {
+    display: inline-block;
+    width: 25%; 
+}
+
+.logo img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.person-info { 
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+
+.person-name {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.company-more-info, .company-details {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.telephone {
+    color: gray;
+}
+
+/* Стили платежной части и вкладок*/
+
+.main-frame {
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 10px 13px 32px -20px #000000;
+    padding-bottom: 20px;
+}
+
+.action-choice {
+    margin-bottom: 20px;
+}
+
+.choice {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: rgb(100, 100, 255);
+}
+
+.payment-options {
+    margin-bottom: 15px;
+}
+
+.option {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    color: rgb(100, 100, 255);
+}
+
+.option:hover, .choice:hover {
+    color: blue;
+    cursor: pointer;
+    background-color: rgb(146, 231, 250);
+    box-shadow: 0 0 40px 8px white inset;
+}
+
+div.active, div.active {
+    color: black;
+}
+
+/* (заплатить с карты любого банка) */
+
+.payment-form {
+    padding-bottom: 30px;
+}
+
+.card-info {
+    width: 45%;
+    background: #eeeeee;
+    border-radius: 15px;
+    box-shadow: 0px 14px 74px -21px #000000;
+    display: inline-block;
+    margin-right: 35px;
+    margin-bottom: 40px;
+}
+
+.banking-systems {
+    width: 40%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.banking-systems img {
+    width: 100%;
+}
+
+.card-number {
+    width: 70%;
+    height: 40px;
+    margin-left: 5%;
+    padding-left: 15px;
+    background: inherit;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    margin-bottom: 10px;
+}
+
+.inputs-wrapper {
+    padding-bottom: 20px;
+}
+
+.card-date {
+    width: 25%;
+    height: 40px;
+    margin-left: 5%;
+    padding-left: 15px;
+    background: inherit;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.card-cvc {
+    width: 20%;
+    height: 40px;
+    margin-left: 5%;
+    padding-left: 15px;
+    background: inherit;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    margin-bottom: 10px;
+}
+
+.payment-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%
+}
+
+.pay-info-block {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.pay-info-label {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+
+}
+
+.pay-info-input {
+    display: inline-block;
+    position: absolute;
+    left: 170px;
+    font-size: 20px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    padding-left: 15px;
+}
+
+.buttonBG-container {
+    position: absolute;
+    width: 80px;
+}
+
+.make-payment {
+    display: block;
+    width: 150px;
+    height: 50px;
+    box-shadow:
+    -20px 20px 0 -17px #fff,
+    20px -20px 0 -17px #fff,
+    0 0 0 2px #bdbdbd,
+    0 0 6px 2px white inset;
+    background-image: linear-gradient(to bottom right, rgb(129, 255, 249), rgb(255, 175, 78), rgb(129, 255, 249));
+    border: none;
+    font-size: 20px;
+    color: gray;
+    transition: .5s;
+    background-size: 200% auto;
+    outline: none;
+}
+
+.make-payment:hover {
+    background-position: right center;
+    cursor: pointer;
+}
+
+/* (заплатить из своего банка) */
+
+.payment-self-info {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.inp-block {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inp-block-label {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    color: gray;
+}
+
+.inp-block-input {
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    left: 150px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    padding-left: 15px;
+}
+
+.VAT-choice {
+    position: relative;
+    left: 150px;
+    margin-bottom: 20px;
+}
+
+.VAT {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    color: rgb(100, 100, 255);
+}
+
+.VAT:hover {
+    color: blue;
+    cursor: pointer;
+    background-color: rgb(146, 231, 250);
+    box-shadow: 0 0 20px 3px white inset;
+}
+
+.VATactive {
+    color: black;
+}
+
+.get-file-button {
+    display: block;
+    width: 400px;
+    height: 50px;
+    box-shadow:
+    -20px 20px 0 -17px #fff,
+    20px -20px 0 -17px #fff,
+    0 0 0 2px #bdbdbd,
+    0 0 6px 2px white inset;
+    background-image: linear-gradient(to bottom right, rgb(129, 255, 249), rgb(255, 175, 78), rgb(129, 255, 249));
+    border: none;
+    font-size: 20px;
+    color: gray;
+    transition: .5s;
+    background-size: 200% auto;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.get-file-button:hover {
+    background-position: right center;
+    cursor: pointer;
+}
+
+.clear-form {
+    width: 150px;
+    font-weight: bold;
+}
+
+/* (Запросить платеж) */
+ 
+.inp-block-input-req {
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    left: 190px;
+    width: 260px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    padding-left: 15px;
+}
+
+.VAT-choice-req {
+    position: relative;
+    left: 200px;
+    margin-bottom: 20px;
+}
+
+.telephone-warning {
+    color: rgb(100, 100, 255);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.req-pay-button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    box-shadow:
+    -20px 20px 0 -17px #fff,
+    20px -20px 0 -17px #fff,
+    0 0 0 2px #bdbdbd,
+    0 0 6px 2px white inset;
+    background-image: linear-gradient(to bottom right, rgb(129, 255, 249), rgb(255, 175, 78), rgb(129, 255, 249));
+    border: none;
+    font-size: 20px;
+    color: gray;
+    transition: .5s;
+    background-size: 200% auto;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.req-pay-button:hover {
+    background-position: right center;
+    cursor: pointer;
+}
+
+/* Информация о компании */
+
+.company-info {
+    margin-top: 30px;
+    box-shadow: 10px 13px 32px -20px #000000;
+    padding-bottom: 20px;
+}
+
+.company-name {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.company-products {
+    text-align: center;
+}
+
+.product {
+    width: 250px;
+    height: 300px;
+    max-height: 300px;
+    border: 1px solid rgb(199, 199, 199);
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 30px;
+    vertical-align: top;
+    transition: .5s;
+}
+
+.helper-prod {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product:hover {
+    background-color: rgb(187, 219, 255);
+}
+
+.prod-descr {
+    text-align: center;
+}
+
+.prod-price {
+    text-align: left;
+    color: gray;
+}
+
+.info-about {
+    font-weight: bold;
+}
+
+.more-info {
+    font-weight: bold;
+    color: rgb(100, 100, 255);
+}
+
+/* Футер */
+
+.footer {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 10px 13px 32px -20px #000000;
+    text-align: center;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: rgb(180, 180, 180);
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    margin-right: 5%;
+    transition: .5s;
+    vertical-align: middle;
+}
+
+.vk {
+    background-image: url(images/all.png);
+	background-position: 0 0;
+	left: 20px;
+	top: -290px;
+}
+
+.vk:hover {
+	background-color: #45688E;
+	cursor: pointer;
+}
+
+.fb {
+    background-image: url(images/all.png);
+	background-position: -40px 0;
+	left: -15px;
+	top: -245px;
+}
+
+.fb:hover {
+	background-color: #3b5998;
+	cursor: pointer;
+}
+
+.twitter {
+    background-image: url(images/all.png);
+	background-position: -80px 0;
+	left: -25px;
+	top: -190px;
+}
+
+.twitter:hover {
+	background-color: #00aced;
+	cursor: pointer;
+}
+
+.mail-icon {
+    background-image: url(images/all.png);
+	background-position: -120px 0;
+	left: 120px;
+	top: -25px;
+}
+
+.mail-icon:hover {
+	background-color: #e02a2a;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .header, .main-frame, .company-info, .footer {
+        box-shadow: 0 13px 32px -20px #000000;
+    }
+
+    .pay-info-label{
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .pay-info-input {
+        font-size: 15px;
+        left: 140px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .card-info {
+        display: block;
+        box-shadow: 0px 14px 35px -21px #000000;
+        width: 90%;
+    }
+
+    .payment-info {
+        display: block;
+        width: 100%;
+    }
+
+    .pay-info-label {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .pay-info-input {
+        font-size: 20px;
+        left: 170px;
+    }
+
+    .make-payment {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 580px) {	
+    .content-holder {
+        margin: 0;
+    }
+
+    .logo {
+        display: block;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .text-info {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .choice {
+        font-size: 18px;
+    }
+
+    .option, .payment-self-info {
+        font-size: 16px;
+    }
+
+    .card-info {
+        display: block;
+        box-shadow: 0px 14px 35px -21px #000000;
+        width: 100%;
+    }
+
+    .payment-info {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .pay-info-input, .inp-block-input-req {
+        width: 90%;
+    }
+
+    .inp-block, .VAT-choice, .VAT-choice-req {
+        position: static;
+    }
+
+    .inp-block-label, .inp-block-input,
+    .pay-info-label, .pay-info-input, .inp-block-input-req {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    .inp-block-input {
+        width: 90%;
+    }
+
+    .get-file-button, .req-pay-button {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .clear-form {
+        display: block;
+        font-weight: bold;
+        margin: auto;
+    }
+}

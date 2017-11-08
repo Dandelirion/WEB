@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bank</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="images/logo.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div class="content-holder">
+
+            <div class="header">
+                <div class="text-info">
+                    <p class="person-name"> Индивидуальный предприниматель Воронин Данил Дмитриевич</p>
+                    <div class="person-info telephone">+79126712176</div>
+                    <div class="person-info site">
+                        <a href="#">www.dandelion.com</a>
+                    </div>
+                    <div class="person-info e-mail">
+                        <a href="#">danil97@mail.ru</a>
+                    </div>
+                    <div class="company-more-info">
+                        <a href="#">Информация о компании</a>
+                    </div>
+                    <div class="company-details">
+                        <a href="#">Показать реквизиты</a>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Логотип">
+                </div>
+            </div>
+
+            <div class="main-frame">
+
+                <div class="action-choice">
+                    <div class="choice pay tablink1" id="init-choice" onclick="openPart(event, 'pay', 1)">Заплатить</div>
+                    <div class="choice request tablink1" onclick="openPart(event, 'req-pay', 1)">Запросить платеж</div>
+                </div>
+
+                <div class="tabcontent1" id="pay">
+                    <div class="payment-options">
+                        <div class="option any-bank tablink2" onclick="openPart(event, 'pay-any', 2)">С карты любого банка</div>
+                        <div class="option self-bank tablink2"onclick="openPart(event, 'self-pay', 2)">Из своего интернет-банка</div>
+                    </div>
+                </div>
+
+                <div class="tabcontent1" id="req-pay">
+                    <p class="payment-self-info">Создайте платежку, а Индивидуальный предприниматель Воронин Данил Дмитриевич подпишет её у себя в интернет-банке</p>
+                    <div class="inp-block">
+                        <div class="inp-block-label">ИНН получателя</div>
+                        <input class="inp-block-input-req" placeholder="ИНН или название получателя">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">БИК</div>
+                        <input class="inp-block-input-req">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Номер счета</div>
+                        <input class="inp-block-input-req">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">За что</div>
+                        <input class="inp-block-input-req" id="ReqVAT-holder" placeholder="без НДС">
+                    </div>
+                    <div class="VAT-choice-req">
+                        <div class="VAT ReqVAT" onclick="chooseReqVAT(event, 'НДС 18%')">НДС 18%</div>
+                        <div class="VAT ReqVAT" onclick="chooseReqVAT(event, 'НДС 10%')">НДС 10%</div>
+                        <div class="VAT ReqVAT VATactive" onclick="chooseReqVAT(event, 'без НДС')">без НДС</div>
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Сколько</div>
+                        <input class="inp-block-input-req">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Номер телефона</div>
+                        <input class="inp-block-input-req" placeholder="+7">
+                    </div>
+                    <div class="telephone-warning">Оставляя телефон, Вы соглашаетесь на обработку персональных данных</div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Эл.почта</div>
+                        <input class="inp-block-input-req" placeholder="Для уведомлений об оплате">
+                    </div>
+                    <button class="req-pay-button">Создать платеж</button>
+                    <div class="clear-form">
+                        <a>Очистить форму</a>
+                    </div>
+                </div>
+
+                <div class="tabcontent2" id="pay-any">
+                    <form class="payment-form">
+                        <div class="card-info">
+                            <div class="banking-systems">
+                                <img src="images/payment-systems.png" alt="Платежные системы">
+                            </div>
+                            <input class="card-number" placeholder="Номер карты" maxlength="16">
+                            <div class="inputs-wrapper">
+                                <input class="card-date" placeholder="ММ/ГГ" maxlength="5">
+                                <input class="card-cvc" placeholder="CVC" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="payment-info">
+                            <div class="pay-info-block">
+                                <div class="pay-info-label">Сумма</div>
+                                <input class="pay-info-input" placeholder="от 1000 до 75000₽" maxlength="5">
+                            </div>
+                            <div class="pay-info-block">
+                                <div class="pay-info-label">Комментарий</div>
+                                <input class="pay-info-input" placeholder="До 150 символов" maxlength="150">
+                            </div>
+                            <div class="pay-info-block">
+                                <div class="pay-info-label">Ваша эл.почта</div>
+                                <input class="pay-info-input" placeholder="Для квитанций об оплате">
+                            </div>
+                            <button class="make-payment">Заплатить</button>        
+                        </div>                   
+                    </form>
+                </div>
+
+                <div class="tabcontent2" id="self-pay">
+                    <p class="payment-self-info">Сформируйте платежку и загрузите её в свой банк для подписи</p>
+                    <div class="inp-block">
+                        <div class="inp-block-label">От кого</div>
+                        <input class="inp-block-input" placeholder="ИНН или название плательщика">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">БИК</div>
+                        <input class="inp-block-input">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Номер счета</div>
+                        <input class="inp-block-input">
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">За что</div>
+                        <input class="inp-block-input" id="SelfVAT-holder" placeholder="без НДС">
+                    </div>
+                    <div class="VAT-choice">
+                        <div class="VAT SelfVAT" onclick="chooseSelfVAT(event, 'НДС 18%')">НДС 18%</div>
+                        <div class="VAT SelfVAT" onclick="chooseSelfVAT(event, 'НДС 10%')">НДС 10%</div>
+                        <div class="VAT SelfVAT VATactive" onclick="chooseSelfVAT(event, 'без НДС')">без НДС</div>
+                    </div>
+                    <div class="inp-block">
+                        <div class="inp-block-label">Сколько</div>
+                        <input class="inp-block-input">
+                    </div>
+                    <button class="get-file-button">Получить файл для интернет-банка</button>
+                    <div class="clear-form">
+                        <a>Очистить форму</a>
+                    </div>
+                </div>
+                <script>document.getElementById('init-choice').click();</script>
+            </div>
+
+            <div class="company-info">
+                <p class="company-name">О компании Индивидуальный предприниматель Воронин Данил Дмитриевич</p>
+                <div class="company-products">
+                    <div class="product">
+                        <img src="images/net.jpg" alt="Сеть">
+                        <p class="prod-descr">Настройка сетевого оборудования (удары молотом по коммутатору)</p>
+                        <p class="prod-price">1000₽ (за один удар)</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/js.jpg" alt="Сеть">
+                        <p class="prod-descr">Написание сайтов с адаптивным дизайном и скриптов к ним</p>
+                        <p class="prod-price">цена договорная</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/meetup.jpg" alt="Сеть">
+                        <p class="prod-descr">Выезжаю на деловые встречи и конференции за Вас</p>
+                        <p class="prod-price">500₽ (зарегистрироваться), 
+                            3000₽ (досидеть до конца), 
+                            500₽ (1 вопрос спикеру), 
+                            поесть на фуршете: бесценно
+                        </p>
+                    </div>                 
+                </div>
+                <div class="company-about">
+                    <p class="info-about">
+                        Меня зовут Данил и я - студент 3 курса ИЕНиМ (aka МатМех) УрФУ, обучающийся на специальности Компьютерная безопасность.
+                        Помимо технических наук разбираюсь также в гуманитарных и естественных, владею английским языком на уровне Advanced.
+                    </p>
+                    <div class="more-info">
+                        <a>Показать всё</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="social vk"></div>
+                <div class="social fb"></div>
+                <div class="social twitter"></div>
+                <div class="social mail-icon"></div>
+            </div>
+        </div>
+    </body>
+</html>
